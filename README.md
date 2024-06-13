@@ -3,9 +3,9 @@ Ce projet contient des scripts Google Apps Script destinés à enrichir une feui
 
 # Scripts inclus :
 1. affichage_pokedex.gs
-    - Description : Ce script permet d'afficher le Pokedex pour une génération spécifique de Pokémon.
+    - Description : Ce script permet d'afficher le Pokedex pour une génération spécifique de Pokémon ou toutes les générations ensemble.
     - Fonctionnalités :
-        - Affiche une boîte de dialogue permettant à l'utilisateur de sélectionner une génération de Pokémon (de 1 à 15).
+        - Affiche une boîte de dialogue permettant à l'utilisateur de sélectionner une génération de Pokémon (de 1 à 15) ou toutes les générations simultanément.
         - Charge les données spécifiques de la feuille de calcul correspondante à la génération choisie.
         - Affiche les images des Pokémon avec des options de filtre pour les versions normales et shiny.
         - Utilise une barre de progression pour indiquer le pourcentage de Pokémon shiny dans la liste.
@@ -28,9 +28,9 @@ Pour utiliser ces scripts avec votre propre feuille de calcul Google Sheets :
 1. Configuration initiale :
     - Créez une nouvelle feuille de calcul Google Sheets ou utilisez une existante.
     - Copiez le contenu de chaque script (affichage_pokedex.gs, choix_pokemon_aleatoire.gs, nom_onglets.gs) dans l'éditeur de script associé à votre feuille de calcul :
-    - Ouvrez votre feuille de calcul.
-    - Allez dans le menu "Extensions" -> "Apps Script".
-    - Collez le script correspondant dans l'éditeur de script et sauvegardez-le.
+            - Ouvrez votre feuille de calcul.
+            - Allez dans le menu "Extensions" -> "Apps Script".
+            - Collez le script correspondant dans l'éditeur de script et sauvegardez-le.
 
 2. Déclencheurs (Triggers) :
     - Configurez des déclencheurs pour automatiser l'exécution des scripts selon vos besoins :
