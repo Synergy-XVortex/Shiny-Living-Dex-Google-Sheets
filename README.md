@@ -28,9 +28,9 @@ Pour utiliser ces scripts avec votre propre feuille de calcul Google Sheets :
 1. Configuration initiale :
     - Créez une nouvelle feuille de calcul Google Sheets ou utilisez une existante.
     - Copiez le contenu de chaque script (affichage_pokedex.gs, choix_pokemon_aleatoire.gs, nom_onglets.gs) dans l'éditeur de script associé à votre feuille de calcul :
-            - Ouvrez votre feuille de calcul.
-            - Allez dans le menu "Extensions" -> "Apps Script".
-            - Collez le script correspondant dans l'éditeur de script et sauvegardez-le.
+        - Ouvrez votre feuille de calcul.
+        - Allez dans le menu "Extensions" -> "Apps Script".
+        - Collez le script correspondant dans l'éditeur de script et sauvegardez-le.
 
 2. Déclencheurs (Triggers) :
     - Configurez des déclencheurs pour automatiser l'exécution des scripts selon vos besoins :
