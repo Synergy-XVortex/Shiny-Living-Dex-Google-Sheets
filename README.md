@@ -42,6 +42,8 @@ Pour utiliser ces scripts avec votre propre feuille de calcul Google Sheets :
 
 # Exemple de configuration
 Un exemple de configuration type de feuille de calcul est fourni dans ce dépôt GitHub pour vous aider à démarrer rapidement avec les scripts et leur utilisation. Assurez-vous d'avoir les autorisations nécessaires pour accéder et modifier la feuille de calcul associée à ces scripts.
+Lien vers la feuille type:
+    - https://docs.google.com/spreadsheets/d/14zgiVrEq1io3lgKCHc0gOt9k-d3sb7qxHgN2Ae9BwQc/edit?usp=sharing
 
 # Auteur
 Ce projet a été développé par Clément Vongsanga. Pour toute question, suggestion ou contribution, n'hésitez pas à ouvrir une issue ou à proposer une pull request sur GitHub.
