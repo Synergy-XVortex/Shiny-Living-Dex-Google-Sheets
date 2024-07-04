@@ -2,7 +2,7 @@ function onEdit(e) {
   var feuille = e.source.getActiveSheet();
   var celluleModifiee = e.range;
 
-  if (feuille.getName() == "Avancement Pokedex" && celluleModifiee.getA1Notation() == "N8" && celluleModifiee.getValue() == "Relancer") {
+  if (feuille.getName() == "Avancement Pokedex" && celluleModifiee.getA1Notation() == "N7" && celluleModifiee.getValue() == "Relancer") {
     relancerChoix();
     celluleModifiee.clearContent(); // Efface le contenu de la cellule
     celluleModifiee.setValue("Nouveau"); // Remplace par "Nouveau"
