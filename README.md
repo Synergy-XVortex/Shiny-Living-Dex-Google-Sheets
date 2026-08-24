@@ -1,50 +1,50 @@
-# Shiny Living Dex Google Sheets
-Ce projet contient des scripts Google Apps Script destinés à enrichir une feuille de calcul Google Sheets avec des fonctionnalités liées à un Pokedex virtuel. Voici un aperçu détaillé des fonctionnalités disponibles :
+# Shiny Living Dex – Google Sheets
 
-# Scripts inclus :
-1. affichage_pokedex.gs
-    - Description : Ce script permet d'afficher le Pokedex pour une génération spécifique de Pokémon ou toutes les générations ensemble.
-    - Fonctionnalités :
-        - Affiche une boîte de dialogue permettant à l'utilisateur de sélectionner une génération de Pokémon (de 1 à 15) ou toutes les générations simultanément.
-        - Charge les données spécifiques de la feuille de calcul correspondante à la génération choisie.
-        - Affiche les images des Pokémon avec des options de filtre pour les versions normales et shiny.
-        - Utilise une barre de progression pour indiquer le pourcentage de Pokémon shiny dans la liste.
+A Google Apps Script toolkit that turns a Google Sheets spreadsheet into an interactive Pokédex tracker for building a **Shiny Living Dex** (a collection containing one shiny Pokémon of every species).
 
-2. choix_pokemon_aleatoire.gs
-    - Description : Ce script facilite le choix aléatoire d'un nom de Pokémon en fonction de critères définis dans différentes feuilles de calcul.
-    - Fonctionnalités :
-        - Surveille les modifications dans une feuille spécifique (Avancement Pokedex) pour détecter le besoin de relancer le choix d'un Pokémon.
-        - Permet de choisir aléatoirement un nom de Pokémon parmi ceux qui répondent à des critères spécifiques (par exemple, marqués comme "A farm").
-        - Fournit une fonction pour trouver le nom anglais correspondant à un nom français donné, en explorant les différentes feuilles de calcul pour la correspondance.
+## Features
 
-3. nom_onglets.gs
-    - Description : Ce script fournit des fonctions utilitaires pour obtenir des informations sur les onglets (feuilles) présents dans la feuille de calcul active.
-    - Fonctionnalités :
-        - Permet d'obtenir la liste des noms de tous les onglets présents dans la feuille de calcul active.
-        - Fournit une fonction pour récupérer le nom d'un onglet spécifique en fonction de son index.
+- **Pokédex viewer** — Browse Pokémon by generation (1 to 15) or view all generations at once, with normal/shiny image filtering and a progress bar showing shiny completion percentage.
+- **Random Pokémon picker** — Automatically suggests a random Pokémon to farm next, based on completion criteria tracked in a dedicated sheet, and watches that sheet for changes to trigger a new pick.
+- **Sheet utilities** — Helper functions to list and retrieve spreadsheet tab names, used internally by the other scripts.
 
-# Utilisation
-Pour utiliser ces scripts avec votre propre feuille de calcul Google Sheets :
-1. Configuration initiale :
-    - Créez une nouvelle feuille de calcul Google Sheets ou utilisez une existante.
-    - Copiez le contenu de chaque script (affichage_pokedex.gs, choix_pokemon_aleatoire.gs, nom_onglets.gs) dans l'éditeur de script associé à votre feuille de calcul :
-        - Ouvrez votre feuille de calcul.
-        - Allez dans le menu "Extensions" -> "Apps Script".
-        - Collez le script correspondant dans l'éditeur de script et sauvegardez-le.
+## Scripts
 
-2. Déclencheurs (Triggers) :
-    - Configurez des déclencheurs pour automatiser l'exécution des scripts selon vos besoins :
-    - Par exemple, utilisez ScriptApp.newTrigger('nom_de_la_fonction').timeBased().everyDays(1).create() pour mettre à jour automatiquement le Pokedex chaque jour.
+| File | Purpose |
+|---|---|
+| `affichage_pokedex.js` | Displays the Pokédex for a chosen generation (or all of them), with shiny/normal image filtering and a shiny-completion progress bar. |
+| `choix_pokemon_aleatoire.js` | Randomly selects a Pokémon to farm based on tracked criteria, and maps French ↔ English Pokémon names across sheets. |
+| `nom_onglets.js` | Utility functions to retrieve sheet/tab names and indexes within the active spreadsheet. |
 
-3. Personnalisation et ajustement :
-    - Personnalisez les scripts en fonction de vos préférences et des données spécifiques à votre feuille de calcul.
-    - Modifiez les noms d'onglets et les critères de sélection de Pokémon selon vos besoins particuliers.
+## Demo
 
-# Exemple de configuration
-Un exemple de configuration type de feuille de calcul est fourni dans ce dépôt GitHub pour vous aider à démarrer rapidement avec les scripts et leur utilisation. Assurez-vous d'avoir les autorisations nécessaires pour accéder et modifier la feuille de calcul associée à ces scripts.
+_Add a screenshot or short GIF here showing the Pokédex view and the shiny-completion progress bar._
 
-Lien vers la feuille type:
-- https://docs.google.com/spreadsheets/d/14zgiVrEq1io3lgKCHc0gOt9k-d3sb7qxHgN2Ae9BwQc/edit?usp=sharing
+## Getting started
 
-# Auteur
-Ce projet a été développé par Clément Vongsanga. Pour toute question, suggestion ou contribution, n'hésitez pas à ouvrir une issue ou à proposer une pull request sur GitHub.
+1. **Get the template spreadsheet**
+   Duplicate the [example spreadsheet](https://docs.google.com/spreadsheets/d/14zgiVrEq1io3lgKCHc0gOt9k-d3sb7qxHgN2Ae9BwQc/edit?usp=sharing) into your own Google Drive, or use `Shiny Living Dex.xlsx` from this repo as a starting template with an equivalent structure.
+
+2. **Add the scripts**
+   In your spreadsheet, go to `Extensions > Apps Script`, then create a script file for each `.js` file in this repo and paste its content in.
+
+3. **(Optional) Automate updates**
+   Set up a time-based trigger to refresh the Pokédex automatically, e.g.:
+   ```javascript
+   ScriptApp.newTrigger('functionName')
+     .timeBased()
+     .everyDays(1)
+     .create();
+   ```
+
+4. **Customize**
+   Adjust tab names and selection criteria in the scripts to match your own spreadsheet layout.
+
+## Tech stack
+
+- Google Apps Script (JavaScript)
+- Google Sheets
+
+## Author
+
+Developed by [Clément Vongsanga](https://github.com/Synergy-XVortex). Questions, suggestions, and pull requests are welcome.
